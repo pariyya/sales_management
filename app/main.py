@@ -11,6 +11,7 @@ from app.routers import admin
 from app.routers import customer
 from app.routers import inventory
 from app.routers import order
+from app.routers import reports
 
 
 Base.metadata.create_all(bind=engine)
@@ -28,6 +29,7 @@ app.include_router(admin.router)
 app.include_router(customer.router)
 app.include_router(inventory.router)
 app.include_router(order.router)
+app.include_router(reports.router)
 
 if __name__ == "__main":
     import uvicorn
